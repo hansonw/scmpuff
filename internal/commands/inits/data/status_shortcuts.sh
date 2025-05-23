@@ -37,6 +37,11 @@ scmpuff_status() {
 }
 
 
+scmpuff_branch() {
+  /usr/bin/env scmpuff branch "$@"
+}
+
+
 # Clear numbered env variables
 scmpuff_clear_vars() {
   local scmpuff_env_char="e"

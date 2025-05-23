@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/mroth/scmpuff/internal/commands/branch"
 	"github.com/mroth/scmpuff/internal/commands/exec"
 	"github.com/mroth/scmpuff/internal/commands/expand"
 	"github.com/mroth/scmpuff/internal/commands/inits"
@@ -43,6 +44,7 @@ func main() {
 	puffCmd.AddCommand(inits.CommandInit())
 	puffCmd.AddCommand(exec.CommandExec())
 	puffCmd.AddCommand(expand.CommandExpand())
+	puffCmd.AddCommand(branch.CommandBranch())
 	puffCmd.AddCommand(status.CommandStatus())
 
 	puffCmd.Execute()

@@ -22,6 +22,10 @@ function scmpuff_status
     end
 end
 
+function scmpuff_branch
+    /usr/bin/env scmpuff branch $argv
+end
+
 function scmpuff_clear_vars
     set -l scmpuff_env_char "e"
     set -l scmpuff_env_vars (set -x | awk '{print $1}' | grep -E '^'$scmpuff_env_char'[0-9]+')
